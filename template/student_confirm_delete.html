@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/student.css'%}">
+
+<div class="student-confirm-delete-container">
+    <h2>Are you sure you want to delete "{{ student.name }}"?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm</button>
+        <a href="{% url 'student_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

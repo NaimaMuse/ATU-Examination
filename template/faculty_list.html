@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/faculty_list.css' %}">
+<div class="con">
+    <h2>Faculty List</h2>
+    <form method="GET" action="{% url 'faculty_list' %}">
+        <input type="text" name="q" placeholder="Search by name or department">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for faculty in faculties %}
+                <tr>
+                    <td>{{ faculty.name }}</td>
+                    <td>{{ faculty.department }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'add_faculty' %}">Add Faculty</a>
+</div>
+{% endblock %}

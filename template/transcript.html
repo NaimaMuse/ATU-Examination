@@ -1,0 +1,30 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+<div class="transcript-container">
+    <h2>Transcript for {{ transcript.student.name }}</h2>
+    <p><strong>SGPA:</strong> {{ transcript.sgpa }}</p>
+    <p><strong>OGPA:</strong> {{ transcript.ogpa }}</p>
+
+    <table class="transcript-table">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Semester</th>
+                <th>Score</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in transcript.student.result_set.all %}
+            <tr>
+                <td>{{ result.course.name }}</td>
+                <td>{{ result.semester.name }}</td>
+                <td>{{ result.score }}</td>
+                <td>{{ result.grade }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %} -->

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/course_list.css'%}">
+
+    
+    <div class="course-list-container">
+        <h2>Course List</h2>
+        <a href="{% url 'course_add' %}" class="btn btn-primary">Add New Course</a>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.id }}</td>
+                <td>{{ course.name }}</td>
+                <td>{{ course.code }}</td>
+                <td>{{ course.credit_hours }}</td>
+                <td>
+                    <a href="{% url 'course_update' course.id %}" class="btn btn-warning">Edit</a>
+                    <a href="{% url 'course_delete' course.id %}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </div>
+{%endfor%}
+
+ 
+{%endblock%}

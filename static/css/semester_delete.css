@@ -1,0 +1,38 @@
+/* Confirmation Styling */
+.course-confirm-delete-container {
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #ffadc1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.course-confirm-delete-container h2 {
+    margin-bottom: 20px;
+}
+
+.course-confirm-delete-container form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.course-confirm-delete-container .btn {
+    background-color: #b42850; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button size */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.course-confirm-delete-container .btn:hover{
+    background-color: #ff0077;
+
+
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/favicon.jpeg' %} " >
+    <title>{% block title %}Abaarso Tech{% endblock %}</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <div class="top-right-buttons">
+        <a href="" class="login-btn" style="margin-left: 130px;">Login</a>
+        <a href="" class="register-btn">Register</a>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="/static/image/images.png" style="border-radius: 4px; width: 120px; height: 120px;" alt="">
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="{%url 'dashboard_overview'%}">Home</a></li>
+            <li><a href="{%url 'course_list'%}">Courses</a></li>
+            <li><a href="{%url 'student_list'%}">Student</a></li>
+            <li><a href="{%url 'faculty_list'%}">Facultiies</a></li>
+            <li><a href="{%url 'semester_list'%}">Semesters </a></li>
+            <li><a href="">Results </a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <!-- Your main content goes here -->
+    </div>
+      
+        {% block content %}{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+    <div class="containerr" style=" border:2px solid palevioletred;
+    margin-left: 490px;
+    width: 610px; 
+    height: 50px;
+    border-radius: 10px;
+    position: fixed;
+    top: 10px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+   ">
+    <div class="top-nav" >
+        <div class="login-register-btns" style="padding: 10px 20px;" >
+            <a href="" class="login-btn" style="
+            padding: 20px; padding-left: 
+            40px; margin: 20px;
+             background-color:#eb3c68; 
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            justify-content: space-around;
+            border-radius: 5px;
+            font-weight: bolder;
+            margin-left: 50x;">Login</a>
+            <a href="" class="register-btn" style="padding: 20px; padding-left: 40px; margin: 20px; background-color: #eb3c68; /* Green */
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bolder;
+
+            border-radius: 5px;">Sign Up</a>
+            <a href="" style="padding: 20px; padding-left: 40px; margin: 20px; background-color: #eb3c68; /* Green */
+            border: none;
+            color: rgb(4, 4, 4);
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: bolder;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;">Courses</a> 
+            <a href="" style="
+            padding: 20px; padding-left: 
+            40px; margin: 20px;
+             background-color:#eb3c68;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            justify-content: space-around;
+            border-radius: 5px;
+            font-weight: bolder;
+            margin-left: 50x;">Students</a>
+        </div>
+    </div>
+</div>
+   
+    <div class="dashboard-container">
+        <div class="counter-box">
+            <div class="emoji">📚</div>
+            <h3>Courses</h3>
+            <p>{{ course_count }}</p>
+        </div>
+        <div class="counter-box">
+            <div class="emoji">📅</div>
+            <h3>Semesters</h3>
+            <p>{{ semester_count }}</p>
+        </div>
+        <div class="counter-box">
+            <div class="emoji">👩‍🎓</div>
+            <h3>Students</h3>
+            <p>{{ student_count }}</p>
+        </div>
+        <div class="counter-box">
+            <div class="emoji">🏫</div>
+            <h3>Faculties</h3>
+            <p>{{ faculty_count }}</p>
+        </div>
+
+{%endblock%}

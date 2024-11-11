@@ -1,0 +1,41 @@
+/* Form Styling */
+.course-form-container {
+    width: 800px;
+    padding: 5px 20px;
+    background-color: #f588a3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(7, 6, 6, 0.1);
+    margin: 0px 0px 0px 400px;
+    padding-left: 50px;
+
+
+}
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ab304f;
+    color: white;
+
+}

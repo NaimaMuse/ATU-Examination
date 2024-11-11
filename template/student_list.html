@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/student.css'%}">
+
+<h2>Student List</h2>
+<form method="GET" action=".">
+    <input type="text" name="q" placeholder="Search by name, ID, batch, or course " value="{{ request.GET.q }}" style="background-color: rgb(225, 225, 225); color: white;">
+    <button type="submit" style="background-color: rgb(245, 242, 243); width: 110px; height: 40px; border: none; border-radius: 5px; font-size: 15px;">Search</button>
+</form>
+<div class="container" >
+<a href="{% url 'student_add' %}" class="btn btn-primary" style="margin-left: 300px; position: fixed ; margin-top: 60px;">Add Student</a>
+<table style="position: fixed; margin-top :100px; margin-left: 300px;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Batch</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.batch }}</td>
+            <td>{{ student.course.name }}</td>
+            <td>
+                <a href="{% url 'student_edit' student.pk %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'student_delete' student.pk %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

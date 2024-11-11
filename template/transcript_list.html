@@ -1,0 +1,30 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+<h2>Transcript List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Semester</th>
+            <th>SGPA</th>
+            <th>OGPA</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transcript in transcripts %}
+        <tr>
+            <td>{{ transcript.student.name }}</td>
+            <td>{{ transcript.semester.name }}</td>
+            <td>{{ transcript.sgpa }}</td>
+            <td>{{ transcript.ogpa }}</td>
+            <td>
+                <a href="{% url 'edit_transcript' transcript.id %}">Edit</a>
+                <a href="{% url 'delete_transcript' transcript.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %} -->

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/course_form.css'%}">
+<h1>hello</h1>
+   <div class="course-form-container">
+    <h2>{% if form.instance.pk %}Update{% else %}Add{% endif %} Course</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">{% if form.instance.pk %}Update{% else %}Add{% endif %}</button>
+    </form>
+   </div>
+{%endblock%}

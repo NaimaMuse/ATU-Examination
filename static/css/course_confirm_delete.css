@@ -1,0 +1,61 @@
+/* Container for the delete confirmation */
+.course-confirm-delete-container {
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #ffadc1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.course-confirm-delete-container h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker text color */
+    font-size: 20px; /* Font size for the heading */
+}
+
+/* Form and button styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style for the Confirm button */
+.btn-danger {
+    background-color: #b42850; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button size */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for Confirm button */
+.btn-danger:hover {
+    background-color: #ce0030; /* Darker gray on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Style for the Cancel button */
+.btn-secondary {
+    background-color: #b42850; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button size */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-decoration: none;
+}
+
+/* Hover effect for Cancel button */
+.btn-secondary:hover {
+    background-color: #ce0030; /* Darker gray on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

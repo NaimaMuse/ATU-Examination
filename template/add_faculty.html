@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/add_faculty.css' %}">
+
+<h2 >Add Faculty</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Save</button>
+</form>
+{% endblock %}

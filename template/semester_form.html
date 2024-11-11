@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+
+<link rel="stylesheet" href="{%static 'css/semester_form.css'%}">
+
+<br>
+<br>
+   <div class="course-form-container">
+    <h2>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Semester</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <br>
+    <br>
+    
+   </div>
+{% endblock %}

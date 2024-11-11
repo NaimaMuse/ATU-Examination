@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/semester_list.css'%}">
+
+    <div class="course-list-container" style="margin-left: 200px;">
+
+        <h1 style="color: black; font-size: 30px; " style="text-align: center;">Semester List</h1>
+        <a href="{% url 'add_semester' %}" class="btn btn-primary" style="margin-left: 70px;">Add Semester</a>
+
+<table style="margin-left: 70px;" >
+
+<thead>
+
+        <tr>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for semester in semesters %}
+        <tr>
+            <td>{{ semester.name }}</td>
+            <td>{{ semester.start_date }}</td>
+            <td>{{ semester.end_date }}</td>
+            <td>
+                <a href="{% url 'edit_semester' semester.pk %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'delete_semester' semester.pk %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+
+.course-form-container {
+    width: 800px;
+    padding: 5px 20px;
+    background-color: #f588a3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(7, 6, 6, 0.1);
+    margin: 0px 0px 0px 400px;
+
+
+}
+
+/* Heading styling */
+.course-form-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #8a1d39;
+    text-align: center;
+}
+
+/* Form element styling */
+.course-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-form-container input[type="text"],
+.course-form-container input[type="number"],
+.course-form-container select,
+.course-form-container textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.course-form-container button {
+    padding: 12px 18px;
+    border: none;
+    background-color: #8a1d39;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.course-form-container button:hover {
+    background-color: #6f1a2e;
+}
+
+/* Error message styling */
+.course-form-container .errorlist {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.course-form-container .errorlist li {
+    margin-bottom: 5px;
+}
